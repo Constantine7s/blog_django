@@ -25,7 +25,7 @@ class Post(models.Model):
     overview = models.CharField(max_length=255)
     slug = models.SlugField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    content = models.CharField()
+    content = models.CharField(max_length=10000)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnail = models.ImageField()
     categories = models.ManyToManyField(Category) 
